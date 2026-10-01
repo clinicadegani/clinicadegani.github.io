@@ -1,0 +1,1012 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Clínicas Degani Psicologia</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap">
+
+<style>
+/* ─── Layout: sectioned landing page, alternating navy / beige / cream ─── */
+:root {
+  --navy:       #0B274A;
+  --navy-deep:  #071D37;
+  --navy-mid:   #13355E;
+  --gold:       #C9A968;
+  --gold-light: #DEC07E;
+  --gold-dim:   #A8893E;
+  --beige:      #E6DDD1;
+  --beige-mid:  #D5C9BA;
+  --cream:      #F7F3EE;
+  --white:      #FFFFFF;
+  --text:       #1A1A2E;
+  --text-muted: #5A5867;
+  --text-light: #F0EBE3;
+  --text-faint: rgba(240,235,227,0.65);
+  --radius-card: 20px;
+  --shadow-card: 0 8px 40px rgba(11,39,74,0.12);
+  --shadow-hover: 0 16px 56px rgba(11,39,74,0.18);
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Single brand-committed palette — no system-theme toggle */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography helpers ── */
+.display {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-wrap: balance;
+}
+.display-italic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  text-wrap: balance;
+}
+
+/* ── Layout helpers ── */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+section { padding-block: 80px; }
+
+/* ── Gold rule accent ── */
+.gold-rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: var(--gold);
+  margin-block: 0 20px;
+}
+.gold-rule--center { margin-inline: auto; }
+
+/* ─────────── NAV ─────────── */
+nav {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(201,169,104,0.2);
+  padding: 16px 0;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.nav-logo span { color: var(--gold); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ─────────── HERO ─────────── */
+#hero {
+  background: var(--navy);
+  padding-block: 100px 90px;
+  position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(201,169,104,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 10% 90%, rgba(201,169,104,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.hero-content { position: relative; z-index: 1; }
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.hero-h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-faint);
+  line-height: 1.75;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+.hero-checks {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin-bottom: 40px;
+}
+.hero-checks li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+.hero-checks li::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  background: rgba(201,169,104,0.15);
+  border: 1.5px solid var(--gold);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l2.5 2.5L9 1' stroke='%23C9A968' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 24px rgba(201,169,104,0.35);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(201,169,104,0.45);
+}
+.btn-primary svg { flex-shrink: 0; }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid rgba(201,169,104,0.5);
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+  margin-left: 12px;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: rgba(201,169,104,0.08);
+  color: var(--gold-light);
+}
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(201,169,104,0.2);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.hero-card-quote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.hero-card-quote::before { content: '\201C'; color: var(--gold); font-size: 2em; line-height: 0; vertical-align: -0.4em; margin-right: 2px; }
+.hero-card-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(201,169,104,0.2);
+  margin-bottom: 20px;
+}
+.hero-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.stat-item {}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+
+/* ─────────── DIFERENCIAIS ─────────── */
+#diferenciais {
+  background: var(--beige);
+  padding-block: 80px;
+}
+.section-header { text-align: center; margin-bottom: 52px; }
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--gold-dim);
+}
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  max-width: 520px;
+  margin-inline: auto;
+}
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.diff-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid rgba(201,169,104,0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.diff-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+.diff-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(11,39,74,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+.diff-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.diff-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ─────────── PLANOS ─────────── */
+#planos {
+  background: var(--cream);
+  padding-block: 80px;
+}
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.plan-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 36px 28px;
+  border: 1px solid var(--beige-mid);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.plan-card--featured {
+  background: var(--navy);
+  border-color: rgba(201,169,104,0.3);
+  padding-top: 48px;
+}
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.plan-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.plan-card--featured .plan-name { color: var(--white); }
+.plan-tagline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.plan-card--featured .plan-tagline { color: var(--text-faint); }
+.plan-price-block {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--beige-mid);
+}
+.plan-card--featured .plan-price-block { border-bottom-color: rgba(201,169,104,0.2); }
+.plan-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.plan-card--featured .plan-price { color: var(--gold); }
+.plan-price sup {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  vertical-align: super;
+}
+.plan-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.plan-card--featured .plan-note { color: var(--text-faint); }
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+.plan-card--featured .plan-features li { color: var(--text-light); }
+.check-icon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  background: rgba(201,169,104,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.plan-card--featured .check-icon { background: rgba(201,169,104,0.18); }
+.check-icon svg { display: block; }
+.plan-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.plan-btn--outline {
+  border: 1.5px solid var(--beige-mid);
+  color: var(--navy);
+}
+.plan-btn--outline:hover {
+  border-color: var(--navy);
+  background: rgba(11,39,74,0.04);
+  transform: translateY(-1px);
+}
+.plan-btn--gold {
+  background: var(--gold);
+  color: var(--navy-deep);
+  box-shadow: 0 4px 20px rgba(201,169,104,0.4);
+}
+.plan-btn--gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,169,104,0.5);
+}
+
+/* ─────────── SOBRE ─────────── */
+#sobre {
+  background: var(--navy);
+  padding-block: 80px;
+}
+.sobre-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.sobre-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+.sobre-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.sobre-title em { font-style: italic; color: var(--gold); }
+.sobre-text {
+  font-size: 0.95rem;
+  color: var(--text-faint);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.sobre-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.sobre-stat {
+  background: var(--navy-mid);
+  border: 1px solid rgba(201,169,104,0.15);
+  border-radius: 16px;
+  padding: 24px 20px;
+}
+.sobre-stat .stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.sobre-stat .stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.sobre-stat--full { grid-column: 1 / -1; }
+
+/* ─────────── CTA FINAL ─────────── */
+#cta {
+  background: var(--beige);
+  padding-block: 80px;
+  text-align: center;
+}
+.cta-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.cta-title em { font-style: italic; color: var(--gold-dim); }
+.cta-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin-inline: auto;
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+.cta-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition);
+}
+.btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); }
+
+/* ─────────── FOOTER ─────────── */
+footer {
+  background: var(--navy-deep);
+  padding-block: 40px;
+  text-align: center;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.footer-logo span { color: var(--gold); }
+.footer-tagline {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 20px;
+}
+.footer-contact {
+  font-size: 0.88rem;
+  color: var(--text-faint);
+  margin-bottom: 20px;
+}
+.footer-contact a {
+  color: var(--gold);
+  text-decoration: none;
+}
+.footer-contact a:hover { text-decoration: underline; }
+.footer-copy {
+  font-size: 0.73rem;
+  color: rgba(240,235,227,0.35);
+  border-top: 1px solid rgba(201,169,104,0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* ─────────── WHATSAPP FLOAT ─────────── */
+.wa-float {
+  position: fixed;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px 12px 14px;
+  border-radius: 50px;
+  box-shadow: 0 6px 32px rgba(37,211,102,0.4);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+}
+.wa-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(37,211,102,0.55);
+}
+.wa-float svg { flex-shrink: 0; }
+
+/* ─────────── DIVIDER ─────────── */
+.gold-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+
+/* ─────────── RESPONSIVIDADE ─────────── */
+@media (max-width: 820px) {
+  section { padding-block: 60px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .hero-checks { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr 1fr; }
+  .plans-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+  .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+  .sobre-visual { grid-template-columns: 1fr 1fr; max-width: 400px; }
+  .wa-float .wa-label { display: none; }
+  .wa-float { padding: 14px; border-radius: 50%; }
+}
+
+@media (max-width: 520px) {
+  .diff-grid { grid-template-columns: 1fr; }
+  .btn-outline { margin-left: 0; }
+  .hero-btn-group { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">Clínicas <span>Degani</span></a>
+    <a href="https://wa.me/5521976326170?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20na%20Clínicas%20Degani" target="_blank" rel="noopener" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.5" stroke="currentColor" stroke-opacity="0.6"/><path d="M7 4v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Agendar Consulta
+    </a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Psicologia · Rio de Janeiro</span>
+        <h1 class="hero-h1 display">
+          Sua saúde emocional<br>merece cuidado<br><em>especializado</em>
+        </h1>
+        <p class="hero-subtitle">
+          Psicoterapia baseada em acolhimento, ciência e transformação. Um espaço seguro para desenvolver autoconhecimento e qualidade de vida através de atendimento ético e humanizado.
+        </p>
+        <ul class="hero-checks">
+          <li>Atendimento Presencial</li>
+          <li>Psicólogos Qualificados</li>
+          <li>Sigilo e Confidencialidade</li>
+          <li>Planos Flexíveis</li>
+        </ul>
+        <div class="hero-btn-group">
+          <a href="#planos" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2.25a6.75 6.75 0 1 0 0 13.5A6.75 6.75 0 0 0 9 2.25zM.75 9a8.25 8.25 0 1 1 16.5 0A8.25 8.25 0 0 1 .75 9z" fill="currentColor" opacity=".3"/><path d="M9 5.25v3.75l2.625 2.625" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            Conheça os Planos
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <p class="hero-card-quote display-italic">
+            Cada pessoa possui uma história única e merece um atendimento acolhedor e personalizado.
+          </p>
+          <div class="hero-card-divider"></div>
+          <div class="hero-card-stats">
+            <div class="stat-item">
+              <div class="stat-num display">100%</div>
+              <div class="stat-label">Sigilo garantido</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num display">Ético</div>
+              <div class="stat-label">e humanizado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ── PLANOS ── -->
+<section id="planos">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Investimento em você</span>
+      <span class="gold-rule gold-rule--center"></span>
+      <h2 class="section-title display">Escolha o plano ideal para sua <em>jornada</em></h2>
+      <p class="section-desc">Cada plano foi pensado para diferentes necessidades e objetivos terapêuticos.</p>
+    </div>
+    <div class="plans-grid">
+
+      <!-- Card 1: Avulsa -->
+      <div class="plan-card">
+        <h3 class="plan-name display">Sessão Avulsa</h3>
+        <p class="plan-tagline">Ideal para quem deseja iniciar o acompanhamento psicológico.</p>
+        <div class="plan-price-block">
+          <div class="plan-price display"><sup>R$</sup>200<sup style="font-size:1rem;font-family:'Montserrat',sans-serif;font-weight:600">,00</sup></div>
+          <p class="plan-note">por sessão individual</p>
+        </div>
+        <ul class="plan-features">
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            1 Sessão Individual
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Atendimento Humanizado
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Atendimento Presencial
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Flexibilidade de Agendamento
+          </li>
+        </ul>
+        <a href="https://wa.me/5521976326170?text=Olá,%20tenho%20interesse%20na%20Sessão%20Avulsa%20de%20R$200,00" target="_blank" rel="noopener" class="plan-btn plan-btn--outline">
+          Agendar Sessão Avulsa
+        </a>
+      </div>
+
+      <!-- Card 2: Mensal (DESTAQUE) -->
+      <div class="plan-card plan-card--featured">
+        <div class="plan-badge">⭐ Mais Escolhido</div>
+        <h3 class="plan-name display">Plano Mensal</h3>
+        <p class="plan-tagline">Acompanhamento contínuo para resultados consistentes.</p>
+        <div class="plan-price-block">
+          <div class="plan-price display"><sup>R$</sup>680<sup style="font-size:1rem;font-family:'Montserrat',sans-serif;font-weight:600">,00</sup></div>
+          <p class="plan-note">4 sessões mensais · economia vs. avulsas</p>
+        </div>
+        <ul class="plan-features">
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            4 Sessões por mês
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Frequência semanal
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Maior continuidade terapêutica
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Melhor acompanhamento da evolução
+          </li>
+        </ul>
+        <a href="https://wa.me/5521976326170?text=Olá,%20tenho%20interesse%20no%20Plano%20Mensal%20de%20R$680,00" target="_blank" rel="noopener" class="plan-btn plan-btn--gold">
+          Quero o Plano Mensal
+        </a>
+      </div>
+
+      <!-- Card 3: Trimestral -->
+      <div class="plan-card">
+        <div class="plan-badge" style="background: var(--navy); color: var(--gold); border: 1px solid rgba(201,169,104,0.4);">🏆 Melhor Investimento</div>
+        <h3 class="plan-name display">Plano Trimestral</h3>
+        <p class="plan-tagline">Para quem busca transformação profunda e evolução contínua.</p>
+        <div class="plan-price-block">
+          <div class="plan-price display"><sup>R$</sup>1.700<sup style="font-size:1rem;font-family:'Montserrat',sans-serif;font-weight:600">,00</sup></div>
+          <p class="plan-note">12 sessões de psicoterapia</p>
+        </div>
+        <ul class="plan-features">
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            12 Sessões de Psicoterapia
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Planejamento Terapêutico
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Maior comprometimento com resultados
+          </li>
+          <li>
+            <span class="check-icon"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#C9A968" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Melhor custo-benefício
+          </li>
+        </ul>
+        <a href="https://wa.me/5521976326170?text=Olá,%20tenho%20interesse%20no%20Plano%20Trimestral%20de%20R$1.700,00" target="_blank" rel="noopener" class="plan-btn plan-btn--outline">
+          Quero o Plano Trimestral
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ── DIFERENCIAIS ── -->
+<section id="diferenciais">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Nossos diferenciais</span>
+      <span class="gold-rule gold-rule--center"></span>
+      <h2 class="section-title display">Por que escolher a <em>Clínicas Degani?</em></h2>
+      <p class="section-desc">Uma abordagem que une ciência, ética e acolhimento para cuidar da sua saúde emocional com excelência.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-icon">🧠</div>
+        <h3 class="diff-title">Atendimento Ético e Humanizado</h3>
+        <p class="diff-desc">Escuta ativa, respeito e empatia em cada sessão. Seu bem-estar emocional é nossa prioridade.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">📚</div>
+        <h3 class="diff-title">Psicologia Baseada em Evidências</h3>
+        <p class="diff-desc">Métodos e técnicas respaldados pela ciência, garantindo resultados reais e consistentes.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">🌱</div>
+        <h3 class="diff-title">Desenvolvimento Pessoal Contínuo</h3>
+        <p class="diff-desc">Ferramentas práticas para crescimento emocional e construção de uma vida mais consciente.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">🤝</div>
+        <h3 class="diff-title">Acolhimento em Todas as Fases</h3>
+        <p class="diff-desc">Suporte especializado independente do momento da vida, da juventude à maturidade.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">🔒</div>
+        <h3 class="diff-title">Total Confidencialidade</h3>
+        <p class="diff-desc">Sigilo absoluto garantido pelo Código de Ética do CFP. Tudo que você compartilha fica entre nós.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">💙</div>
+        <h3 class="diff-title">Ambiente Seguro para Evoluir</h3>
+        <p class="diff-desc">Um espaço sem julgamentos onde você pode ser autêntico e trabalhar o que realmente importa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ── SOBRE ── -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div>
+        <span class="sobre-eyebrow">Nossa missão</span>
+        <span class="gold-rule"></span>
+        <h2 class="sobre-title display">Um espaço seguro para você <em>ser quem é</em></h2>
+        <p class="sobre-text">
+          A psicoterapia é um investimento na sua saúde emocional, nos seus relacionamentos e na sua qualidade de vida.
+        </p>
+        <p class="sobre-text">
+          Na Clínicas Degani, acreditamos que cada pessoa possui uma história única e merece um atendimento acolhedor, ético e personalizado.
+        </p>
+        <p class="sobre-text">
+          Nossa missão é ajudar você a desenvolver recursos emocionais para enfrentar desafios, fortalecer sua autoestima e construir uma vida mais leve e consciente.
+        </p>
+      </div>
+      <div class="sobre-visual">
+        <div class="sobre-stat">
+          <div class="stat-num display">Ética</div>
+          <div class="stat-label">CFP · Conselho Federal de Psicologia</div>
+        </div>
+        <div class="sobre-stat">
+          <div class="stat-num display">100%</div>
+          <div class="stat-label">Sigilo profissional garantido</div>
+        </div>
+        <div class="sobre-stat sobre-stat--full">
+          <div class="stat-num display" style="font-size:1.3rem;line-height:1.4">Escuta · Ciência · Acolhimento · Transformação</div>
+          <div class="stat-label" style="margin-top:10px">Os quatro pilares do nosso atendimento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ── CTA FINAL ── -->
+<section id="cta">
+  <div class="container">
+    <span class="section-eyebrow">Dê o primeiro passo</span>
+    <span class="gold-rule gold-rule--center"></span>
+    <h2 class="cta-title display">Você está pronto para cuidar da sua <em>saúde emocional?</em></h2>
+    <p class="cta-desc">
+      Dê o primeiro passo para uma vida com mais equilíbrio, autoconhecimento e bem-estar. Nossa equipe está pronta para acolher você.
+    </p>
+    <div class="cta-btns">
+      <a href="https://wa.me/5521976326170?text=Olá,%20gostaria%20de%20receber%20mais%20informações%20sobre%20os%20planos%20de%20psicoterapia." target="_blank" rel="noopener" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9c0 1.35.37 2.6 1 3.67L1.5 16.5l3.93-1.01A7.44 7.44 0 0 0 9 16.5c4.14 0 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5z" fill="#25D366"/><path d="M12.78 11.07c-.18-.27-1.35-.67-1.56-.74-.2-.07-.35-.1-.5.1s-.57.73-.7.88c-.13.14-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.11 6.76 6.76 0 0 1-1.25-1.55c-.13-.23 0-.35.1-.47.09-.1.2-.26.3-.38.1-.13.13-.22.2-.37.07-.14.03-.27-.02-.38-.05-.1-.5-1.2-.68-1.63-.18-.43-.36-.37-.5-.38H5.7c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.78 2.09.89 2.24c.1.14 1.52 2.33 3.7 3.17.52.2.93.31 1.24.4.52.14.99.12 1.37.07.42-.06 1.29-.53 1.47-1.03.18-.5.18-.93.13-1.03z" fill="white"/></svg>
+        Falar com um Especialista
+      </a>
+      <a href="#planos" class="btn-navy">
+        Ver Planos e Preços
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">Clínicas <span>Degani</span></div>
+    <div class="footer-tagline">Escuta · Ciência · Acolhimento · Transformação</div>
+    <div class="footer-contact">
+      📱 WhatsApp: <a href="https://wa.me/5521976326170" target="_blank" rel="noopener">(21) 97632-6170</a>
+    </div>
+    <div class="footer-copy">© 2026 Clínicas Degani. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLUTUANTE ── -->
+<a href="https://wa.me/5521976326170?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20na%20Clínicas%20Degani" target="_blank" rel="noopener" class="wa-float" aria-label="Falar pelo WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 1.5C5.75 1.5 1.5 5.75 1.5 11c0 1.65.45 3.19 1.24 4.5L1.5 20.5l5.13-1.23A9.44 9.44 0 0 0 11 20.5c5.25 0 9.5-4.25 9.5-9.5S16.25 1.5 11 1.5z" fill="#25D366"/><path d="M15.56 13.66c-.22-.33-1.66-.82-1.92-.9-.25-.09-.43-.13-.61.13-.18.25-.7.9-.86 1.08-.16.18-.32.2-.59.07a7.47 7.47 0 0 1-2.21-1.37 8.28 8.28 0 0 1-1.53-1.9c-.16-.28 0-.43.12-.58.11-.12.25-.32.37-.48.12-.16.16-.27.24-.45.08-.18.04-.33-.02-.46-.06-.13-.61-1.47-.84-2-.22-.52-.44-.45-.61-.46H7c-.17 0-.46.06-.7.33-.25.27-.94.91-.94 2.22s.96 2.57 1.1 2.75c.13.17 1.87 2.86 4.56 3.9.63.24 1.13.38 1.52.49.64.17 1.22.14 1.68.08.51-.07 1.58-.65 1.8-1.27.22-.61.22-1.14.16-1.25z" fill="white"/></svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+
+</body></html>
